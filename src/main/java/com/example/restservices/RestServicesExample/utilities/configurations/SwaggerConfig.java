@@ -16,7 +16,7 @@ import java.util.Set;
 @EnableSwagger2
 public class SwaggerConfig {
 
-    public static final Contact DEFAULT_CONTACT = new Contact("Ankita", "http://ankitawalia", "ankitaTest@gmail.com");
+    public static final Contact DEFAULT_CONTACT = new Contact("Contact Person Name", "http://testurl", "contactEmailID@gmail.com");
     public static final ApiInfo DEFAULT_API_INFO = new ApiInfo("Api Documentation for RestServices Example",
             "Api Documentation for RestService Example",
             "1.0", "urn:tos", DEFAULT_CONTACT, "Apache 2.0",
