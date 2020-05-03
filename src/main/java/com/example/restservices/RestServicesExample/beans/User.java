@@ -3,25 +3,18 @@ package com.example.restservices.RestServicesExample.beans;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import java.util.Date;
 
 @ApiModel(description = "User Information")
-@Entity
-public class UserEntity {
+public class User {
 
     @Size(min = 2, message="Name should have at least 3 characters")
     @NotNull(message = "User name can't be null")
     @ApiModelProperty(notes = "Name length should be more than 1", required = true)
     private String name;
-
-    @Id
-    @GeneratedValue
     private Integer id;
 
     @Past(message = "DOB should be less than the current date")
@@ -29,10 +22,10 @@ public class UserEntity {
     @ApiModelProperty(notes = "DOB should be less than current date", required = true)
     private Date DOB;
 
-    public UserEntity() {
+    public User() {
     }
 
-    public UserEntity(String name, Integer id, Date DOB) {
+    public User(String name, Integer id, Date DOB) {
         this.name = name;
         this.id = id;
         this.DOB = DOB;
